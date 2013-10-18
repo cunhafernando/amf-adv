@@ -25,7 +25,7 @@ class WelcomeController < ApplicationController
   end
   
   def atuacao
-    @title = 'AM Farias Advogado - Area de Atuacaoo'
+    @title = 'AM Farias Advogado - Area de Atuacao'
   end
 
 end
