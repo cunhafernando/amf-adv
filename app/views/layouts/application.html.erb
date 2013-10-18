@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html style="" class=" js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="pt"><!--<![endif]-->
 <head>
-  <title>AmfAdv</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="" type="image/x-icon" /> 
+  <link rel="shortcut icon" href="" type="image/x-icon" /> 
+
+  <title><%= @title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Belleza' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
+    <div class="row">
+      
+         <!-- Header and Nav -->
+     <nav class="top-bar">
+       <ul class="title-area">
+         <!-- Title Area -->
+         <li class="name">
+           <h1>
+             <a href="#">
+                 <%= image_tag "amfarias_logo.png" %>
+             </a>
+           </h1>
+         </li>
+         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+       </ul>
+ 
+       <section class="top-bar-section">
+
+         <!-- Right Nav Section -->
+         <ul class="right">
+
+           <li class="divider"></li>
+           <li><%= link_to "PÁGINA INICIAL", "index" %></li>
+        
+           <li class="divider"></li>
+           <li><%= link_to "ÁREAS DE ATUAÇÃO", "atuacao" %></li>
+        
+           <li class="divider"></li>
+           <li><a href="#">ARTIGOS & NOTÍCIAS</a></li>
+        
+           <li class="divider"></li>
+           <li><%= link_to "LINKS ÚTEIS", "servicos" %></li>
+        
+           <li class="divider"></li>
+           <li><%= link_to "CONTATO", "contato" %></li>
+           <li class="divider"></li>
+
+         </ul>
+       </section>
+     </nav>
+ 
+     <!-- End Header and Nav -->
+ 
+     </div>
+
 <%= yield %>
+
+<!-- Footer -->
+  
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div class="row">
+        <div class="large-4 columns">
+            <h8><p>© Copyright Antônio Martins Farias Advogado</p></h8>
+        </div>
+        <div class="large-4 columns">
+            <h8><p>Tel: (21) 2552-9564 / (21) 9675-1055</p>
+                <p>email: antoniomartins@amfarias.adv.br</p></h8>
+        </div>
+        <div class="large-4 columns">
+            <h8><p>Criação: <a href="">Fernando Cunha</a></p></h8>
+        </div>
+      </div>
+    </div> 
+  </footer>
+
+
+  <script>
+      document.write('<script src=/assets/'
+        + ('__proto__' in {} ? 'zepto' : 'jquery')
+        + '.js><\/script>');
+    </script>
+  
+  
+  <script>
+    $(document).foundation('orbit', {
+    	animation: 'fade',
+		bullets: false,
+		timer_speed: 5000,
+		animation_speed: 1000,
+		navigation_arrows: false,
+		slide_number: false,
+		pause_on_hover: false,
+    });
+  </script>	
+
+  <script>
+    $(document).foundation();
+  </script>
+
+
 
 </body>
 </html>
