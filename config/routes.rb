@@ -1,5 +1,8 @@
 AmfAdv::Application.routes.draw do
   
+  resources :contacts
+
+
   get "welcome/index"
   
 
@@ -18,6 +21,11 @@ AmfAdv::Application.routes.draw do
   match '/previdenciario'=> 'welcome#previdenciario'
   
   match '/servicos' => 'welcome#servicos'
+  
+  match '/new' => 'contacts#new'
+  
+  match '/confirmation'=> 'welcome#confirmation'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

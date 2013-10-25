@@ -1,0 +1,78 @@
+<div class="section-container auto" data-section="" style="">
+  <section class="section active" style="padding-top: 52px;">
+
+    <h5 class="title" style="left: 0px;"><a href="">Contate nosso escritório</a></h5>
+    
+    <div class="content" data-slug="panel1" style="">
+
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2>Ops! Corrija os erros abaixo para que possamos mandar as informações para seu email.</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<div class="row collapse">  
+		<div class="large-2 columns">
+    		<%= f.label :name , class: "inline" %>
+    	</div>
+		<div class="large-10 columns">
+    		<%= f.text_field :name %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="field">
+  	<div class="row collapse">  
+  		<div class="large-2 columns">
+    		<%= f.label :email , class: "inline" %>
+    	</div>
+		<div class="large-10 columns">
+    		<%= f.text_field :email %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="field">
+    <div class="row collapse">  
+    	<div class="large-2 columns">
+    		<%= f.label :phone, class: "inline" %>
+    	</div>
+		<div class="large-10 columns">
+    		<%= f.text_field :phone %>
+  		</div>
+    </div>
+  </div></br>
+  
+  <div class="field">
+    <div class="row collapse">  
+    	<div class="large-2 columns">
+    		<%= f.label :message, class: "inline" %>
+    	</div>
+		<div class="large-10 columns">
+    		<%= f.text_field :message %>
+  		</div>
+    </div>
+  </div></br>
+ 
+  <div class="actions">
+    <%= f.submit :class => 'radius button' %>
+  </div>
+  
+<% end %>
+
+
+
+      
+    </div>
+  </section>
+  
+</div>
+
