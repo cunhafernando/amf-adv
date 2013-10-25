@@ -4297,10 +4297,10 @@ ul.pagination {
   list-style-position: inside; }
   .side-nav li {
     margin: 0 0 0.4375em 0;
-    font-size: 0.875em; }
+    font-size: 1em; }
     .side-nav li a {
       display: block;
-      color: #2ba6cb; }
+      color: #D9DCDD; }
     .side-nav li.active > a:first-child {
       color: #4d4d4d;
       font-weight: bold; }
