@@ -132,7 +132,7 @@ pt-BR:
     select:
       prompt: Por favor selecione
     submit:
-      create: Quero saber como anunciar
+      create: Enviar
       submit: Salvar %{model}
       update: Atualizar %{model}
   number:

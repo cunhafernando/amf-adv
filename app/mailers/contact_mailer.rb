@@ -4,12 +4,12 @@ class ContactMailer < ActionMailer::Base
   def welcome_email(contact)
     @contact = contact
     @url = 'http://www.amfarias.adv.br'
-    mail(to:@contact.email, subject:'Instrucoes de Anuncio')
+    mail(to:@contact.email, subject:'Confirmacao de Contato')
   end
   
   def contact_message(contact)
     @contact = contact
-    mail(to: 'cunhafernandofj@gmail.com', subject:'Solicitacao de Anuncio')
+    mail(to: 'cunhafernandofj@gmail.com', subject:'Contato de Cliente')
   end
 end
 
