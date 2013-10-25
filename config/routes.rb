@@ -9,8 +9,6 @@ AmfAdv::Application.routes.draw do
 
 
   match '/index' => 'welcome#index'
-
-  match '/contato'=> 'welcome#contato'
   
   match '/atuacao'=> 'welcome#atuacao'
 
