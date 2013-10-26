@@ -4,7 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1><%= @contact.name %> acabou de solicitar informações sobre serviços!</h1>
+	  <h1>Mensagem de Contado</h1>
+	  <h2>Data de envio: <%= Time.now.strftime("%d/%m/%Y %H:%M") %></h2>
+	  <h3><%= @contact.name %> acabou de solicitar informações sobre serviços!</h3>
     <p>
       Entre em contato com ele(a) através do telefone: <%= @contact.phone %>.<br/>
     </p>
@@ -14,7 +16,11 @@
     <p>Boa Sorte!</p>
 	
 	<p>
-	  <b>Message:</b>
+	  <b>Email:</b>
+	  <%= @contact.email %>
+	</p>
+	<p>
+	  <b>Mensagem:</b>
 	  <%= @contact.message %>
 	</p>
   </body>
