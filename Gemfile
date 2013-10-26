@@ -30,6 +30,8 @@ gem 'jquery-rails'
 
 gem 'rails_12factor'
 
+gem "foundation-icons-rails", "~> 0.0.1.2"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
