@@ -4,13 +4,13 @@
         
 		<ul data-orbit>
 		  <li>
-		    <%= image_tag "amfarias_banner1.jpg" %>
+		    <%= image_tag "amfarias_livro.jpg" %>
 		  </li>
 		  <li>
-		    <%= image_tag "amfarias_banner2.jpg" %>
+		    <%= image_tag "amfarias_tribunal.jpg" %>
 		  </li>
 		  <li>
-		    <%= image_tag "amfarias_banner3.jpg" %>
+		    <%= image_tag "amfarias_sala_reuniao.jpg" %>
 		  </li>
 		</ul>
          
@@ -79,3 +79,14 @@
     </div>
 	
 </div>
+<script>
+  $(document).foundation('orbit', {
+  	animation: 'fade',
+	bullets: false,
+	timer_speed: 5000,
+	animation_speed: 1000,
+	navigation_arrows: false,
+	slide_number: false,
+	pause_on_hover: false,
+  });
+</script>	
