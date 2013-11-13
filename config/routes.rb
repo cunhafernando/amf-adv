@@ -1,8 +1,5 @@
 AmfAdv::Application.routes.draw do
   
-  resources :artigos
-
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
