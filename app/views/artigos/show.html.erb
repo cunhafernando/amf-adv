@@ -1,0 +1,60 @@
+
+
+
+<div class="row">
+	<hr>
+	<h1>Artigo</h1>
+   <!-- Main Blog Content -->
+   <div class="large-9 columns" role="content">
+
+     <article>
+		 <p id="notice"><%= notice %></p>
+       		<h3><%= @artigo.titulo %></h3>
+       
+       <div class="row">
+         <div class="large-12 columns">
+           <p><%= @artigo.conteudo %></p>
+		   <h6>Autor: <%= @artigo.autor %></h6>
+		   <h8>Data: <%= @artigo.data %></h8>
+         </div>
+          
+       </div>
+	   <br/>
+<%= link_to 'Voltar', artigos_path %>
+     </article>
+
+    
+
+    
+   </div>
+
+   <!-- End Main Content -->
+
+
+   <!-- Sidebar -->
+
+   <aside class="large-3 columns">
+
+     <h5>Livros</h5>
+
+
+     <div class="panel">
+       <%= image_tag "livro-contratos-teoria-pratica.jpeg" %>
+     </div>
+
+     <div class="panel">
+       <%= image_tag "livro-manual-direito-individual-trabalho.jpeg" %>
+     </div>
+	 
+     <div class="panel">
+       <%= image_tag "livro-direito-razao.jpeg" %>
+     </div>
+	 
+   </aside>
+
+   <!-- End Sidebar -->
+   
+   
+ </div>
+
+ <!-- End Main Content and Sidebar -->
