@@ -1,11 +1,5 @@
 AmfAdv::Application.routes.draw do
   
-  resources :noticia
-
-
-  resources :artigos
-
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -17,7 +11,7 @@ AmfAdv::Application.routes.draw do
 
 
 
-  match '/pagina-inicial' => 'welcome#index'
+  match '/index' => 'welcome#index'
   
   match '/atuacao'=> 'welcome#atuacao'
 
@@ -29,13 +23,11 @@ AmfAdv::Application.routes.draw do
   
   match '/servicos' => 'welcome#servicos'
   
-  match '/contato' => 'contacts#new'
+  match '/new' => 'contacts#new'
   
   match '/confirmation'=> 'welcome#confirmation'
   
   match '/testando' => 'welcome#testando'
-  
-
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
