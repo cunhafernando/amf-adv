@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131102133912) do
+ActiveRecord::Schema.define(:version => 20131113183810) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(:version => 20131102133912) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "artigos", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "comentarios", :force => true do |t|
     t.string   "autor"
     t.text     "conteudo"
@@ -61,6 +70,23 @@ ActiveRecord::Schema.define(:version => 20131102133912) do
     t.string   "email"
     t.string   "phone"
     t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "decisaos", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "noticia", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @decisao.titulo %>
+</p>
+
+<p>
+  <b>Conteudo:</b>
+  <%= @decisao.conteudo %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @decisao.autor %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @decisao.data %>
+</p>
+
+
+<%= link_to 'Edit', edit_decisao_path(@decisao) %> |
+<%= link_to 'Back', decisaos_path %>
