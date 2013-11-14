@@ -49,16 +49,16 @@
          <ul class="right">
 
            <li class="divider"></li>
-           <li><%= link_to "PÁGINA INICIAL", "index" %></li>
+           <li><%= link_to "PÁGINA INICIAL", "/home" %></li>
         
            <li class="divider"></li>
-           <li><%= link_to "ÁREAS DE ATUAÇÃO", "atuacao" %></li>
+           <li><%= link_to "ÁREAS DE ATUAÇÃO", "/areas-de-atuacao" %></li>
 		   
            <li class="divider"></li>
            <li class="has-dropdown">
              <a href="#">ARTIGOS & NOTÍCIAS</a>
              <ul class="dropdown">
-               <li><a href="#">Artígos</a></li>
+               <li><%= link_to "Artigos", "/artigos" %></li>
                <li><a href="#">Notícias</a></li>
                <li><a href="#">Decisões do STF</a></li>
              </ul>
@@ -66,10 +66,10 @@
 
         
            <li class="divider"></li>
-           <li><%= link_to "LINKS ÚTEIS", "servicos" %></li>
+           <li><%= link_to "LINKS ÚTEIS", "/links-uteis" %></li>
         
            <li class="divider"></li>
-           <li><%= link_to "CONTATO", "new" %></li>
+           <li><%= link_to "CONTATO", "/contato" %></li>
            <li class="divider"></li>
 
          </ul>

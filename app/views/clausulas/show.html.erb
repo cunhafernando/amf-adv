@@ -1,25 +1,75 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Titulo:</b>
-  <%= @clausula.titulo %>
-</p>
-
-<p>
-  <b>Conteudo:</b>
-  <%= @clausula.conteudo %>
-</p>
-
-<p>
-  <b>Autor:</b>
-  <%= @clausula.autor %>
-</p>
-
-<p>
-  <b>Data:</b>
-  <%= @clausula.data %>
-</p>
 
 
-<%= link_to 'Edit', edit_clausula_path(@clausula) %> |
-<%= link_to 'Back', clausulas_path %>
+
+<div class="row">
+	<hr>
+   <!-- Main Blog Content -->
+   <div class="large-9 columns" role="content">
+	   <h1>Artigos</h1>
+     <article>
+		
+       <h3><%= @clausula.titulo %></h3><br />
+
+       <div class="row">
+         <div class="large-12 columns">
+           <p><%= @clausula.conteudo %></p>
+         </div>
+       </div>
+	   <h8>Autor: <%= @clausula.autor %></h8><br /><br />
+	   <h8>Data: <%= @clausula.data %></h8><br /><br />
+
+	   <%= link_to 'Back', clausulas_path %>
+     </article>
+
+     
+
+   
+
+   </div>
+
+   <!-- End Main Content -->
+
+
+   <!-- Sidebar -->
+
+   <aside class="large-3 columns">
+
+     <h5>Categorias</h5>
+     <ul class="side-nav">
+       <li><a href="#">Notícias</a></li>
+       <li><a href="#">Artigos</a></li>
+       <li><a href="#">Decisão dos Tribunais</a></li>
+     </ul>
+
+     <div class="panel">
+ 		<ul data-orbit>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-imobiliario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro_direito-tributario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-civil.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		</ul>
+     </div>
+
+   </aside>
+
+   <!-- End Sidebar -->
+ </div>
+
+ <!-- End Main Content and Sidebar -->
+ 
+ <script>
+   $(document).foundation('orbit', {
+   	animation: 'fade',
+ 	bullets: false,
+ 	timer_speed: 5000,
+ 	animation_speed: 1000,
+ 	navigation_arrows: false,
+ 	slide_number: false,
+ 	pause_on_hover: false,
+   });
+ </script>	

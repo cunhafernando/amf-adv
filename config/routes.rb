@@ -20,9 +20,9 @@ AmfAdv::Application.routes.draw do
 
 
 
-  match '/index' => 'welcome#index'
+  match '/home' => 'welcome#index'
   
-  match '/atuacao'=> 'welcome#atuacao'
+  match '/areas-de-atuacao'=> 'welcome#atuacao'
 
   match '/tributario'=> 'welcome#tributario'
 
@@ -30,13 +30,15 @@ AmfAdv::Application.routes.draw do
 
   match '/previdenciario'=> 'welcome#previdenciario'
   
-  match '/servicos' => 'welcome#servicos'
+  match '/links-uteis' => 'welcome#servicos'
   
-  match '/new' => 'contacts#new'
+  match '/contato' => 'contacts#new'
   
   match '/confirmation'=> 'welcome#confirmation'
   
   match '/testando' => 'welcome#testando'
+  
+  match '/artigos' => 'clausulas#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
