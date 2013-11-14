@@ -1,29 +1,75 @@
-<h1>Listing decisaos</h1>
 
-<table>
-  <tr>
-    <th>Titulo</th>
-    <th>Conteudo</th>
-    <th>Autor</th>
-    <th>Data</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="row">
+	<hr>
+   <!-- Main Blog Content -->
+   <div class="large-9 columns" role="content">
+	   <h1>Decisões dos Tribunais</h1>
+     <article>
+		 <% @decisaos.each do |decisao| %><hr />
+       <h3><%= decisao.titulo %></h3><br />
 
-<% @decisaos.each do |decisao| %>
-  <tr>
-    <td><%= decisao.titulo %></td>
-    <td><%= decisao.conteudo %></td>
-    <td><%= decisao.autor %></td>
-    <td><%= decisao.data %></td>
-    <td><%= link_to 'Show', decisao %></td>
-    <td><%= link_to 'Edit', edit_decisao_path(decisao) %></td>
-    <td><%= link_to 'Destroy', decisao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+       <div class="row">
+         <div class="large-12 columns">
+           <p><%= truncate(decisao.conteudo, :length => 325, separator: ' ') %></p>
+         </div>
+       </div>
+	   <h8>Autor: <%= decisao.autor %></h8><br /><br />
+	   <h8>Data: <%= decisao.data %></h8><br /><br />
+	   <h8><%= link_to 'Leia Mais', decisao %></h8>
 
-<br />
+	 <% end %>
+     </article>
 
-<%= link_to 'New Decisao', new_decisao_path %>
+     
+
+   
+
+   </div>
+
+   <!-- End Main Content -->
+
+
+   <!-- Sidebar -->
+
+   <aside class="large-3 columns">
+
+     <h5>Categorias</h5>
+     <ul class="side-nav">
+       <li><a href="#">Notícias</a></li>
+       <li><a href="#">Artigos</a></li>
+       <li><a href="#">Decisão dos Tribunais</a></li>
+     </ul>
+
+     <div class="panel">
+ 		<ul data-orbit>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-imobiliario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro_direito-tributario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-civil.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		</ul>
+     </div>
+
+   </aside>
+
+   <!-- End Sidebar -->
+ </div>
+
+ <!-- End Main Content and Sidebar -->
+ 
+ <script>
+   $(document).foundation('orbit', {
+   	animation: 'fade',
+ 	bullets: false,
+ 	timer_speed: 5000,
+ 	animation_speed: 1000,
+ 	navigation_arrows: false,
+ 	slide_number: false,
+ 	pause_on_hover: false,
+   });
+ </script>	
+

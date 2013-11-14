@@ -1,25 +1,73 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Titulo:</b>
-  <%= @informe.titulo %>
-</p>
+<div class="row">
+	<hr>
+   <!-- Main Blog Content -->
+   <div class="large-9 columns" role="content">
+	   <h1>Notícias</h1>
+     <article>
+		
+       <h3><%= @informe.titulo %></h3><br />
 
-<p>
-  <b>Conteudo:</b>
-  <%= @informe.conteudo %>
-</p>
+       <div class="row">
+         <div class="large-12 columns">
+           <p><%= @informe.conteudo %></p>
+         </div>
+       </div>
+	   <h8>Autor: <%= @informe.autor %></h8><br /><br />
+	   <h8>Data: <%= @informe.data %></h8><br /><br />
 
-<p>
-  <b>Autor:</b>
-  <%= @informe.autor %>
-</p>
+	   <%= link_to 'Voltar', informes_path %>
+     </article>
 
-<p>
-  <b>Data:</b>
-  <%= @informe.data %>
-</p>
+     
+
+   
+
+   </div>
+
+   <!-- End Main Content -->
 
 
-<%= link_to 'Edit', edit_informe_path(@informe) %> |
-<%= link_to 'Back', informes_path %>
+   <!-- Sidebar -->
+
+   <aside class="large-3 columns">
+
+     <h5>Categorias</h5>
+     <ul class="side-nav">
+       <li><a href="#">Notícias</a></li>
+       <li><a href="#">Artigos</a></li>
+       <li><a href="#">Decisão dos Tribunais</a></li>
+     </ul>
+
+     <div class="panel">
+ 		<ul data-orbit>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-imobiliario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro_direito-tributario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		  <li>
+ 		    <%= link_to image_tag("livro-direito-civil.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
+ 		  </li>
+ 		</ul>
+     </div>
+
+   </aside>
+
+   <!-- End Sidebar -->
+ </div>
+
+ <!-- End Main Content and Sidebar -->
+ 
+ <script>
+   $(document).foundation('orbit', {
+   	animation: 'fade',
+ 	bullets: false,
+ 	timer_speed: 5000,
+ 	animation_speed: 1000,
+ 	navigation_arrows: false,
+ 	slide_number: false,
+ 	pause_on_hover: false,
+   });
+ </script>	

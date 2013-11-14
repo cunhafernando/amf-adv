@@ -40,6 +40,15 @@ AmfAdv::Application.routes.draw do
   
   match '/artigos' => 'clausulas#index'
   
+  match '/artigo' => 'clausulas#show'
+  
+  match '/noticias' => 'informes#index'
+  
+  match '/noticia' => 'informes#show'
+  
+  match '/decisoes-dos-tribunais' => 'decisaos#index'
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
