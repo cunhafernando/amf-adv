@@ -1,0 +1,29 @@
+<h1>Listing clausulas</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Conteudo</th>
+    <th>Autor</th>
+    <th>Data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clausulas.each do |clausula| %>
+  <tr>
+    <td><%= clausula.titulo %></td>
+    <td><%= clausula.conteudo %></td>
+    <td><%= clausula.autor %></td>
+    <td><%= clausula.data %></td>
+    <td><%= link_to 'Show', clausula %></td>
+    <td><%= link_to 'Edit', edit_clausula_path(clausula) %></td>
+    <td><%= link_to 'Destroy', clausula, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clausula', new_clausula_path %>
