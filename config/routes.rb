@@ -1,5 +1,8 @@
 AmfAdv::Application.routes.draw do
   
+  resources :informes
+
+
   resources :clausulas
 
 
