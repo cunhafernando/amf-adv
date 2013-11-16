@@ -5,7 +5,7 @@
    <div class="large-9 columns" role="content">
 	   <h1>Artigos</h1>
      <article>
-		 <% @clausulas.each do |clausula| %><hr />
+		 <% for clausula in @clausulas.reverse %><hr />
        <h3><%= clausula.titulo %></h3><br />
 
        <div class="row">
