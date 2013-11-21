@@ -1,84 +1,47 @@
-<div class="row">
-	<hr>
-    <div class="large-12 columns">
-        
-		<ul data-orbit>
-		  <li>
-		    <%= image_tag "amfarias_livro.jpg" %>
-		  </li>
-		  <li>
-		    <%= image_tag "amfarias_tribunal.jpg" %>
-		  </li>
-		  <li>
-		    <%= image_tag "amfarias_sala_reuniao.jpg" %>
-		  </li>
-		</ul>
-         
-        
-    </div>
+
 </div>
+
+<div class="row">
   
-<!-- Three-up Content Blocks -->
-
-<div class="row">
-	<hr>
-    <div class="large-12 columns">
-        <h4>Notícias</h4>
-     
-    </div>
     
-    <div class="large-4 columns">
-      <h5>Pai pode deixar de incluir filho em doação de imóvel</h5>
-      <p>Em decisão unânime, a 3ª Turma do Superior Tribunal de Justiça negou provimento a Recurso Especial que buscava invalidar a doação de imóvel feita por um pai, já morto, apenas aos filhos do primeiro casamento e em acordo de separação homologado...</p>
-      <p>18/09/2013</p>
-      <a href="">Saiba mais...</a>
-    </div>
     
-    <div class="large-4 columns">
-      <h5>Sócio cotista responde por dívida em sociedade familiar</h5>
-      <p>Não é possível afastar a responsabilidade de um dos sócios quando se trata de sociedade familiar, na qual mãe e filha detêm cada uma 50% do capital social votante, se não ficou comprovado na demanda quem atuou como gerente ou administrador da empresa.</p>
-      <p>18/09/2013</p>
-      <a href="">Saiba mais...</a>
-    </div>
+    <div class="large-7 columns">
+		
+        <h4>Minha História</h4>
+      
+        <p>Antônio Martins de Farias é natural de Pernambuco, e iniciou sua vida profissional no Rio de Janeiro (R.J.) e, em Brasília (D. F.), concluiu seu primeiro Curso Superior, sendo Bacharelado em Ciências Contábeis, pela Uneb.</p>
+ 
+        <p>Dede 1991, fixou residência na cidade do Rio de Janeiro, onde, em 2011, concluiu o Curso de Direito, pela Faculdade Moraes Júnior – Mackenzie Rio, tendo sido aprovado no VIII Exame da OAB, em 2012.</p>
+ 
+        <p>Mesmo atuando como Contador e prestando serviços para diversas pequenas e médias empresas no Estado do Rio de Janeiro, exerce, ainda, a Advocacia, nas áreas de lides tributárias, previdenciárias, além de daquelas afetas ao direito do consumidor e trabalhistas.</p>
     
-    <div class="large-4 columns">
-      <h5>Pai que dá carro a menor não é condenado por homicídio</h5>
-      <p>O pai que entrega ou, por omissão, permite que o filho menor de idade dirija seu carro não pode ser automaticamente condenado por homicídio culposo. Para a 5ª Turma do Superior Tribunal de Justiça, não se pode presumir a culpa nem implicar...</p>
-      <p>18/09/2013</p>
-      <a href="">Saiba mais...</a>
+      <!-- Gallery sidebar with a block grid. Note: block grid items should be the same size for optimal results -->
+      
+      <!-- <ul class="small-block-grid-3">
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+        <li><a href="#"><img src="http://placehold.it/120x120" /></a></li>
+      </ul> -->
     </div>
-	
-</div>
-<div class="row"><div class="large-12 columns"><hr></div></div>
-
-<div class="row">
-    <div class="large-12 columns">
-        <h4>Artigos</h4>
-     
-    </div>
-    
-    <div class="large-4 columns">
-      <h5>Direitos em separação se estendem à união estável</h5>
-      <p>Quando um casal desenvolve uma relação afetiva contínua e duradoura, conhecida publicamente e estabelece a vontade de constituir uma família, essa relação pode ser reconhecida como união estável, de acordo com o Código Civil de 2002. Esse instituto também é legitimado pela...</p>
-      <p>08/08/2013</p>
-      <a href="">Saiba mais...</a>
-    </div>
-    
-    <div class="large-4 columns">
-      <h5>STJ adota teoria da perda da chance em erro médico</h5>
-      <p>O pedido de indenização por perdas e danos pode ser formulado pelo paciente e/ou seus familiares nos casos de erro médico, desde que presentes os tradicionais requisitos da responsabilidade civil, que são: (i) a culpa (por negligência, imprudência...</p>
-      <p>19/09/2013</p>
-      <a href="">Saiba mais...</a>
-    </div>
-    
-    <div class="large-4 columns">
-      <h5>Aumento Abusivo no Plano de Saúde para pessoas com 59 anos de idade</h5>
-      <p>Inicialmente, as empresas de saúde majoravam o plano das pessoas com idade acima de 60 anos a título de mudança por faixa etária. Contudo, tal prática é vedada pelo Estatuto do Idoso, que só aceita os aumentos anuais  autorizados pela ANS.  Portanto...</p>
-      <p>07/03/2013</p>
-      <a href="">Saiba mais...</a>
-    </div>
-	
-</div>
+    <div class="large-5 columns">
+		
+      <h5>Últimas Notícias</h5>
+	  <% @informes.each do |informe| %><hr style="border:1px dashed #000000;">
+      <p><%= truncate(informe.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', informe %></p>
+	  <% end %>
+	  
+	  <% @clausulas.each do |clausula| %><hr style="border:1px dashed #000000;">
+      <p><%= truncate(clausula.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', clausula %></p>
+	  <% end %>
+	  
+	  <% @decisaos.each do |decisao| %><hr style="border:1px dashed #000000;">
+      <p><%= truncate(decisao.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', decisao %></p>
+	  <% end %>
+    </div>    
+  </div>
 <script>
   $(document).foundation('orbit', {
   	animation: 'fade',

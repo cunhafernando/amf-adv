@@ -13,7 +13,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Belleza' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Abel|News+Cycle|Josefin+Sans|Marcellus|Dorsa|Bubbler+One' rel='stylesheet' type='text/css'>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,7 +27,7 @@
 </head>
 <body>
 
-    <div class="row">
+   
       
          <!-- Header and Nav -->
      <nav class="top-bar">
@@ -35,9 +35,7 @@
          <!-- Title Area -->
          <li class="name">
            <h1>
-             <a href="#">
-                 <%= image_tag "amfarias_logo.png" %>
-             </a>
+
            </h1>
          </li>
          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -52,11 +50,17 @@
            <li><%= link_to "PÁGINA INICIAL", "/home" %></li>
         
            <li class="divider"></li>
-           <li><%= link_to "ÁREAS DE ATUAÇÃO", "/areas-de-atuacao" %></li>
-		   
+		   <li class="has-dropdown">
+           <%= link_to "ÁREAS DE ATUAÇÃO", "/areas-de-atuacao" %>
+           		<ul class="dropdown">
+             	   <li><%= link_to "Direito Tributário", "/tributario" %></li>
+             	   <li><%= link_to "Direito do Consumidor", "/consumidor" %></li>
+             	   <li><%= link_to "Direito Previdenciário", "/previdenciario" %></li>
+           		</ul>
+	   	   </li>
            <li class="divider"></li>
            <li class="has-dropdown">
-             <a href="#">ARTIGOS & NOTÍCIAS</a>
+             <%= link_to "ARTIGOS & NOTÍCIAS", "" %>
              <ul class="dropdown">
                <li><%= link_to "Artigos", "/artigos" %></li>
                <li><%= link_to "Notícias", "/noticias" %></li>
@@ -76,19 +80,43 @@
        </section>
 	   
      </nav>
+	  <div class="row">
  	<div class="large-12 columms">
+		<div class="left">
+			          <%= image_tag "logo-antonio-martins-farias.png" %>
+		</div>
 		 <div class="right">
 			 <%= link_to image_tag("webicon-facebook-s.png", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
 			 <%= link_to image_tag("webicon-linkedin-s.png", :border=>0), 'http://www.linkedin.com/profile/view?id=249796408&authType=NAME_SEARCH&authToken=cdjC&locale=pt_BR&srchid=2666472671382799462779&srchindex=3&srchtotal=14&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A2666472671382799462779%2CVSRPtargetId%3A249796408%2CVSRPcmpt%3Aprimary'%>
 			 <%= link_to image_tag("webicon-tumblr-s.png", :border=>0), 'https://www.tumblr.com/'%>
-			 <%= link_to image_tag("webicon-googleplus-s.png", :border=>0), 'https://plus.google.com/?hl=pt_br‎'%>
-		 </div>
+			 <%= link_to image_tag("webicon-googleplus-s.png", :border=>0,), 'https://plus.google.com/?hl=pt_br‎'%>
+		 </div> </br>
 	 </div>
      <!-- End Header and Nav -->
  
      </div>
+
+	 <div class="row">
+	
+	     
+	 		<ul data-orbit>
+	 		  <li>
+	 		    <%= image_tag "amfarias_livro.jpg" %>
+	 		  </li>
+	 		  <li>
+	 		    <%= image_tag "amfarias_tribunal.jpg" %>
+	 		  </li>
+	 		  <li>
+	 		    <%= image_tag "amfarias_sala_reuniao.jpg" %>
+	 		  </li>
+	 		</ul><br />
 	 
 
+  
+
+	
+	 </div>
+	 
 <%= yield %>
 
 <!-- Footer -->
@@ -96,7 +124,7 @@
   <footer class="row">
     <div class="large-12 columns">
       <hr>
-      <div class="row">
+ 
         <div class="large-4 columns">
             <h8><p>© Copyright Antônio Martins Farias Advogado</p></h8>
         </div>
@@ -107,7 +135,7 @@
         <div class="large-4 columns">
             <h8><p>Criação: <a href="">Fernando Cunha</a></p></h8>
         </div>
-      </div>
+
     </div> 
   </footer>
 

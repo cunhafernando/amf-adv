@@ -2,6 +2,10 @@ class WelcomeController < ApplicationController
   
   def index
     @title = 'AM Farias Advogado - Home'
+    @informes = Informe.order("created_at desc").limit(2)
+    @clausulas = Clausula.order("created_at desc").limit(2)
+    @decisaos = Decisao.order("created_at desc").limit(2)
+    
   end
   
   def contato

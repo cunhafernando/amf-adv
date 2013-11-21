@@ -1,24 +1,24 @@
-
 <div class="row">
-	<hr>
-   <!-- Main Blog Content -->
-   <div class="large-9 columns" role="content">
-	   <h3>Notícias</h3>
-     <article>
-		 <% for informe in @informes.reverse %><hr />
-       <h5><%= informe.titulo %></h5><br />
 
-       <div class="row">
+   <!-- Main Blog Content -->
+   
+   <div class="large-9 columns" role="content">
+	   <h4>Notícias</h4>
+
+		 <% for informe in @informes.reverse %><hr style="border:1px dashed #000000;"> 
+       <h6><%= informe.titulo %></h6><br />
+
+       
          <div class="large-12 columns">
-           <p><%= truncate(informe.conteudo, :length => 325, separator: ' ') %></p>
+           <p><%= truncate(informe.conteudo, :length => 325, separator: ' ') %> <%= link_to '( Leia Mais )', informe %></p>
          </div>
-       </div>
-	   <h8>Autor: <%= informe.autor %></h8><br /><br />
-	   <h8>Data: <%= informe.data %></h8><br /><br />
-	   <h8><%= link_to 'Leia Mais', informe %></h8>
+      
+	   <!--<h8>Autor: <%= informe.autor %></h8><br /><br />
+	   <h8>Data: <%= informe.data %></h8><br /><br />-->
+	   <h8></h8>
 
 	 <% end %>
-     </article>
+
 
      
 
@@ -33,26 +33,25 @@
 
    <aside class="large-3 columns">
 
-     <h5>Categorias</h5>
-     <ul class="side-nav">
-       <li><a href="#">Notícias</a></li>
-       <li><a href="#">Artigos</a></li>
-       <li><a href="#">Decisão dos Tribunais</a></li>
-     </ul>
-
-     <div class="panel">
- 		<ul data-orbit>
- 		  <li>
- 		    <%= link_to image_tag("livro-direito-imobiliario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
- 		  </li>
- 		  <li>
- 		    <%= link_to image_tag("livro_direito-tributario.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
- 		  </li>
- 		  <li>
- 		    <%= link_to image_tag("livro-direito-civil.jpeg", :border=>0), 'https://www.facebook.com/antonio.martinsdefarias?fref=ts'%>
- 		  </li>
- 		</ul>
-     </div>
+       <h4>Livros</h4><hr style="border:1px dashed #000000;"> 
+       <!-- <ul class="side-nav">
+         <li><a href="#">Notícias</a></li>
+         <li><a href="#">Artigos</a></li>
+         <li><a href="#">Decisão dos Tribunais</a></li>
+       </ul> -->
+  	<h6>Processo Tributário</h6>
+       <div class="panel">
+		 
+   		    <%= link_to image_tag("processo-trib-e-adm.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4978547'%>
+  		</div>
+  		<h6>Livro de Impostos</h6>
+  		<div class="panel">
+   		    <%= link_to image_tag("impostos-federais-estaduais-e-municipais.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4685720'%>
+  		</div>
+  		<h6>Curso de Direito Tributário</h6>
+  		<div class="panel">
+   		    <%= link_to image_tag("curso-de-direito-tributario.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4232114'%>
+  		</div>
 
    </aside>
 

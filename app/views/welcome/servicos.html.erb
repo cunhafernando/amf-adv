@@ -1,24 +1,31 @@
 <div class="row">
-	<hr>
+
 	<div class="large-12 columns">
-		<h3>LInks Úteis</h3>
-		<div class="row">
+		<h5>Links Úteis</h5><hr style="border:1px dashed #000000;"> 
+		
 			<div class="large-4 small-12 columns">
+				<h6>Poder Judiciário</h6>
 				<ul class="side-nav">
-  				  <li><%= link_to "Tribunal Regional Federal - 2ª Região", "http://www.trf2.jus.br/" %></li>
-  				  <li class="divider"></li>					
-				  <li><%= link_to "Tribunal Regional do Trabalho - 1ª Região", "http://www.trt1.jus.br/" %></li>
-				  <li class="divider"></li>
-				  <li><%= link_to "Tribunal de Contas da União", "http://portal2.tcu.gov.br/TCU" %></li>
-				  <li class="divider"></li>
-				  <li><%= link_to "Tribunal de Justiça do Rio de Janeiro", "http://www.tjrj.jus.br/web/guest" %></li>
-				  <li class="divider"></li>
-				  <li><%= link_to "Supremo Tribunal Federal", "http://www.stf.jus.br/portal/principal/principal.asp" %></li>
-				  <li class="divider"></li>
-				  <li><%= link_to "Superior Tribunal de Justiça", "http://www.stj.gov.br/portal_stj/publicacao/engine.wsp" %></li>
-				  <li class="divider"></li>
-				  <li><%= link_to "Secretaria Estadual de Fazenda do Estado RJ", "http://www.fazenda.rj.gov.br/" %></li>
+  				  <li><%= link_to "Supremo Tribunal Federal - STF", "http://www.stf.jus.br/portal/principal/principal.asp" %></li>
+  				  
+  				  <li><%= link_to "Conselho Nacional de Justiça - CNJ", "http://www.cnj.jus.br" %></li>
+  				  
+				  <li><%= link_to "Superior Tribunal de Justiça - STJ", "http://www.stj.gov.br/portal_stj/publicacao/engine.wsp" %></li>
+				  
+				  <li><%= link_to "Tribunal Regional Federal - TRF - 2ª Região", "http://www.trf2.jus.br/" %></li>
+				 	
+				  <li><%= link_to "Tribunal Regional do Trabalho - TRT - 1ª Região", "http://www.trt1.jus.br/" %></li>
+				  
+				  
+				  <li><%= link_to "Tribunal de Justiça do Rio de Janeiro - TJ/RJ", "http://www.tjrj.jus.br/web/guest" %></li>
 				</ul>
+				<hr style="border:1px dashed #000000;"> 
+				<h6>Poder Executivo Federal</h6>
+				<hr style="border:1px dashed #000000;"> 
+				<h6>Presidência da República</h6>
+				<ul class="side-nav">
+    			  <li><%= link_to "Palácio do Planalto", "http://www2.planalto.gov.br" %></li>
+    			</ul>
 			</div>
 			
 			<div class="large-4 small-12 columns">
@@ -26,25 +33,43 @@
 			</div>
 			
 			<div class="large-4 small-12 columns">
+				
+				
+				<h6>Poder Executivo Estadual - RJ</h6>
 				<ul class="side-nav">
+  				  <li><%= link_to "Secretaria Estadual da Fazenda - RJ", "http://www.fazenda.rj.gov.br/sefaz" %></li>
+  				  </ul>
+				  <hr style="border:1px dashed #000000;"> 
+				  <h6>Poder Executivo Municipal</h6>
+				  <ul class="side-nav">
+  				  <li><%= link_to "Prefeitura Municipal do Rio de Janeiro", "http://www.rio.rj.gov.br" %></li>
+  				  
+  				  <li><%= link_to "Secretaria Municipal de Fazenda - SMF", "http://www.rio.rj.gov.br/web/smf" %></li>
+  				  </ul>
+				  <hr style="border:1px dashed #000000;"> 
+				  <h6>Ordem dos Advogados do Brasil</h6>
+				  <ul class="side-nav">
+  				  <li><%= link_to "Conselho Federal da OAB", "http://www.oab.org.br/" %></li>
+  				  
   				  <li><%= link_to "OAB-RJ", "http://www.oabrj.org.br/" %></li>
-  				  <li class="divider"></li>
-  				  <li><%= link_to "Advocacia Geral da União", "http://www.agu.gov.br/sistemas/site/templatesitehome.aspx" %></li>
-  				  <li class="divider"></li>
-  				  <li><%= link_to "Procuradoria Geral da Fazenda", "http://www.pgfn.fazenda.gov.br/" %></li>
-  				  <li class="divider"></li>
-  				  <li><%= link_to "Procuradoria Geral do Estado RJ", "http://www.rj.gov.br/web/pge" %></li>
-  				  <li class="divider"></li>
-  				  <li><%= link_to "Ministério Público do Estado RJ", "http://www.mprj.mp.br/" %></li>
-  				  <li class="divider"></li>
-  				  <li><%= link_to "Defensoria Pública do Estado RJ", "http://www.portaldpge.rj.gov.br/Portal/" %></li>
 				</ul>
 			</div>
 			
-		</div>
+		
 	</div>
 </div>
 
+<script>
+  $(document).foundation('orbit', {
+  	animation: 'fade',
+	bullets: false,
+	timer_speed: 5000,
+	animation_speed: 1000,
+	navigation_arrows: false,
+	slide_number: false,
+	pause_on_hover: false,
+  });
+</script>
  
 
 

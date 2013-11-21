@@ -1,24 +1,23 @@
-
 <div class="row">
-	<hr>
+
    <!-- Main Blog Content -->
    <div class="large-9 columns" role="content">
 	   <h3>Decisões dos Tribunais</h3>
-     <article>
+   
 		 <% for decisao in @decisaos.reverse %><hr />
        <h5><%= decisao.titulo %></h5><br />
 
-       <div class="row">
+
          <div class="large-12 columns">
-           <p><%= truncate(decisao.conteudo, :length => 325, separator: ' ') %></p>
+           <p><%= truncate(decisao.conteudo, :length => 325, separator: ' ') %> <%= link_to '( Leia Mais )', decisao %></p>
          </div>
-       </div>
-	   <h8>Autor: <%= decisao.autor %></h8><br /><br />
-	   <h8>Data: <%= decisao.data %></h8><br /><br />
-	   <h8><%= link_to 'Leia Mais', decisao %></h8>
+
+	   <!-- <h8>Autor: <%= decisao.autor %></h8><br /><br />
+	   <h8>Data: <%= decisao.data %></h8><br /><br /> -->
+	   <h8></h8>
 
 	 <% end %>
-     </article>
+
 
      
 
