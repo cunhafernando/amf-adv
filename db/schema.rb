@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131114124536) do
+ActiveRecord::Schema.define(:version => 20131122164149) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -84,6 +84,42 @@ ActiveRecord::Schema.define(:version => 20131114124536) do
   end
 
   create_table "decisaos", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "direito_consumidors", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "direito_empresarials", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "direito_previdenciarios", :force => true do |t|
+    t.string   "titulo"
+    t.text     "conteudo"
+    t.string   "autor"
+    t.date     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "direito_tributarios", :force => true do |t|
     t.string   "titulo"
     t.text     "conteudo"
     t.string   "autor"

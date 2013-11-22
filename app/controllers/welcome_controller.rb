@@ -14,10 +14,12 @@ class WelcomeController < ApplicationController
   
   def consumidor
     @title = 'Antonio Martins de Farias advogado - Direito do Consumidor'
+    @direito_consumidors = DireitoConsumidor.order("created_at desc").limit(5)
   end
   
   def previdenciario
     @title = 'Antonio Martins de Farias Advogado - Direito Previdenciario'
+    @direito_previdenciarios = DireitoPrevidenciario.order("created_at desc").limit(5)
   end
 
   def servicos
@@ -26,10 +28,16 @@ class WelcomeController < ApplicationController
   
   def tributario
     @title = 'Antonio Martins de Farias Advogado - Direito Tributario'
+    @direito_tributarios = DireitoTributario.order("created_at desc").limit(5)
   end
   
   def atuacao
     @title = 'Antonio Martins de Farias Advogado - Area de Atuacao'
+  end
+  
+  def empresarial
+    @title = 'Antonio Martins de Farias Advogado - Direito Empresarial'
+    @direito_empresarials = DireitoEmpresarial.order("created_at desc").limit(5)
   end
 
 end

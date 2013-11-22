@@ -47,7 +47,7 @@
          <ul class="right">
 
            <li class="divider"></li>
-           <li><%= link_to "PÁGINA INICIAL", "/home" %></li>
+           <li><%= link_to "HOME", "/home" %></li>
         
            <li class="divider"></li>
 		   <li class="has-dropdown">
@@ -56,6 +56,7 @@
              	   <li><%= link_to "Direito Tributário", "/tributario" %></li>
              	   <li><%= link_to "Direito do Consumidor", "/consumidor" %></li>
              	   <li><%= link_to "Direito Previdenciário", "/previdenciario" %></li>
+				   <li><%= link_to "Direito Empresarial", "/empresarial" %></li>
            		</ul>
 	   	   </li>
            <li class="divider"></li>
@@ -64,11 +65,19 @@
              <ul class="dropdown">
                <li><%= link_to "Artigos", "/artigos" %></li>
                <li><%= link_to "Notícias", "/noticias" %></li>
-               <li><%= link_to "Decisões dos Tribunais", "/decisoes-dos-tribunais" %></li>
              </ul>
            </li>
 
-        
+           <li class="divider"></li>
+           <li class="has-dropdown">
+             <%= link_to "DECISÕES DOS TRIBUNAIS", "" %>
+             <ul class="dropdown">
+           	   <li><%= link_to "Decisões do Tributário", "/decisao-tributarios" %></li>
+           	   <li><%= link_to "Decisões do Consumidor", "/decisao-consumidors" %></li>
+           	   <li><%= link_to "Decisões do Previdenciário", "/decisao-previdenciarios" %></li>
+			   <li><%= link_to "Decisões do Empresarial", "/decisao-empresarials" %></li>
+             </ul>
+           </li>
            <li class="divider"></li>
            <li><%= link_to "LINKS ÚTEIS", "/links-uteis" %></li>
         

@@ -4,7 +4,7 @@
   <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
   <div class="large-7 columns">
     
-    <h4>Direito Previdenciário</h4>
+    <h4>Direito Empresarial</h4>
     
     <p>“O homem é produto de trabalho”. Nossa sociedade busca o lucro a qualquer custo e isso implica explorar o homem como meio de produção. Embora tenha sido a partir da Segunda Guerra Mundial que o Estado passou a ser um Estado Social, visando amparar os mais necessitados.</p>
 
@@ -20,8 +20,8 @@
   <div class="large-5 columns">
       
 	  <h5>Decisões dos Tribunais</h5>
-	  <% @direito_previdenciarios.each do |direito_previdenciario| %><hr style="border:1px dashed #000000;">
-	  <p><%= truncate(direito_previdenciario.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', direito_previdenciario %></p>
+	  <% @direito_empresarials.each do |direito_empresarial| %><hr style="border:1px dashed #000000;">
+	  <p><%= truncate(direito_empresarial.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', direito_empresarial %></p>
 	  <% end %>
       
   </div>

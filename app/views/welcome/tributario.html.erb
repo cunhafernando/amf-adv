@@ -2,7 +2,7 @@
 
   <!-- Main Content Section -->
   <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-  <div class="large-9 push-3 columns">
+  <div class="large-7 columns">
     
     <h4>Direito Tributário</h4>
     
@@ -19,15 +19,12 @@
   
   <!-- Nav Sidebar -->
   <!-- This is source ordered to be pulled to the left on larger screens -->
-  <div class="large-3 pull-9 columns">
+  <div class="large-5 columns">
       
-    <ul class="side-nav">
-      <li><%= link_to "DIREITO TRIBUTÁRIO", "tributario" %></li>
-      <li><%= link_to "DIREITO DO CONSUMIDOR", "consumidor" %></li>
-      <li><%= link_to "DIREITO PREVIDENCIÁRIO", "previdenciario" %></li>
-    </ul>
-    
-    <p><%= image_tag "antonio_martins_farias.jpg" %></p>
+	  <h5>Decisões dos Tribunais</h5>
+	  <% @direito_tributarios.each do |direito_tributario| %><hr style="border:1px dashed #000000;">
+	  <p><%= truncate(direito_tributario.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', direito_tributario %></p>
+	  <% end %>
       
   </div>
   

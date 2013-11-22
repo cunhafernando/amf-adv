@@ -1,5 +1,17 @@
 AmfAdv::Application.routes.draw do
   
+  resources :direito_empresarials
+
+
+  resources :direito_previdenciarios
+
+
+  resources :direito_consumidors
+
+
+  resources :direito_tributarios
+
+
   resources :informes
 
 
@@ -36,7 +48,7 @@ AmfAdv::Application.routes.draw do
   
   match '/confirmation'=> 'welcome#confirmation'
   
-  match '/testando' => 'welcome#testando'
+  match '/empresarial' => 'welcome#empresarial'
   
   match '/artigos' => 'clausulas#index'
   
@@ -47,6 +59,25 @@ AmfAdv::Application.routes.draw do
   match '/noticia' => 'informes#show'
   
   match '/decisoes-dos-tribunais' => 'decisaos#index'
+  
+  match '/decisao-tributarios' => 'direito_tributarios#index'
+  
+  match '/decisao-tributario' => 'direito_tributarios#show'
+  
+  match '/decisao-consumidors' => 'direito_consumidors#index'
+  
+  match '/decisao-consumidor' => 'direito_consumidors#show'
+  
+  match '/decisao-empresarials' => 'direito_empresarials#index'
+  
+  match '/decisao-empresarial' => 'direito_empresarials#show'
+  
+  match '/decisao-previdenciarios' => 'direito_previdenciarios#index'
+  
+  match '/decisao-previdenciario' => 'direito_previdenciarios#show'
+  
+  
+  
 
   
   # The priority is based upon order of creation:

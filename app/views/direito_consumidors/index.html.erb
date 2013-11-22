@@ -1,0 +1,72 @@
+
+<div class="row">
+
+   <!-- Main Blog Content -->
+   
+   <div class="large-9 columns" role="content">
+	   <h4>Direito do Consumidor</h4>
+
+		 <% for direito_consumidor in @direito_consumidors.reverse %><hr style="border:1px dashed #000000;"> 
+       <h6><%= direito_consumidor.titulo %></h6><br />
+
+       
+         <div class="large-12 columns">
+           <p><%= truncate(direito_consumidor.conteudo, :length => 325, separator: ' ') %> <%= link_to '( Leia Mais )', direito_consumidor %></p>
+         </div>
+
+	   <h8></h8>
+
+	 <% end %>
+
+
+     
+
+   
+
+   </div>
+
+   <!-- End Main Content -->
+
+
+   <!-- Sidebar -->
+
+   <aside class="large-3 columns">
+
+       <h4>Livros</h4><hr style="border:1px dashed #000000;"> 
+       <!-- <ul class="side-nav">
+         <li><a href="#">Notícias</a></li>
+         <li><a href="#">Artigos</a></li>
+         <li><a href="#">Decisão dos Tribunais</a></li>
+       </ul> -->
+  	<h6>Processo Tributário</h6>
+       <div class="panel">
+		 
+   		    <%= link_to image_tag("processo-trib-e-adm.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4978547'%>
+  		</div>
+  		<h6>Livro de Impostos</h6>
+  		<div class="panel">
+   		    <%= link_to image_tag("impostos-federais-estaduais-e-municipais.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4685720'%>
+  		</div>
+  		<h6>Curso de Direito Tributário</h6>
+  		<div class="panel">
+   		    <%= link_to image_tag("curso-de-direito-tributario.jpg", :border=>0), 'http://www.livrariasaraiva.com.br/produto/4232114'%>
+  		</div>
+
+   </aside>
+
+   <!-- End Sidebar -->
+ </div>
+
+ <!-- End Main Content and Sidebar -->
+ 
+ <script>
+   $(document).foundation('orbit', {
+   	animation: 'fade',
+ 	bullets: false,
+ 	timer_speed: 5000,
+ 	animation_speed: 1000,
+ 	navigation_arrows: false,
+ 	slide_number: false,
+ 	pause_on_hover: false,
+   });
+ </script>	

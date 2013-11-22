@@ -2,7 +2,7 @@
 
   <!-- Main Content Section -->
   <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-  <div class="large-9 push-3 columns">
+  <div class="large-7 columns">
     
     <h4>Direito do Consumidor</h4>
     
@@ -15,22 +15,19 @@
     <p>O dever de informar é considerado um modo de cooperação, uma necessidade social que se tornou um autêntico ônus pró-ativo incumbido aos fornecedores (parceiros comerciais, ou não, do consumidor), pondo fim à antiga e injusta obrigação que o consumidor tinha de se acautelar.</p>
   
   <p>Também cabe ressaltar que com a informação e com uma política pública de defesa dos consumidores o Brasil tem avançado quando nos referimos à relação de consumo.</p>
-  
+
           
   </div>
   
   
   <!-- Nav Sidebar -->
   <!-- This is source ordered to be pulled to the left on larger screens -->
-  <div class="large-3 pull-9 columns">
+  <div class="large-5 columns">
       
-    <ul class="side-nav">
-      <li><%= link_to "DIREITO TRIBUTÁRIO", "tributario" %></li>
-      <li><%= link_to "DIREITO DO CONSUMIDOR", "consumidor" %></li>
-      <li><%= link_to "DIREITO PREVIDENCIÁRIO", "previdenciario" %></li>
-    </ul>
-    
-    <p><%= image_tag "antonio_martins_farias.jpg" %></p>
+	  <h5>Decisões dos Tribunais</h5>
+	  <% @direito_consumidors.each do |direito_consumidor| %><hr style="border:1px dashed #000000;">
+	  <p><%= truncate(direito_consumidor.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', direito_consumidor %></p>
+	  <% end %>
       
   </div>
   
