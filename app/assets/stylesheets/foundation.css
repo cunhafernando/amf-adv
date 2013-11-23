@@ -22,7 +22,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: url(bg.jpg) no-repeat center fixed #a6633c;
+  background: url(background.jpg) repeat-x center fixed #a6633c;
   color: #999898;
   padding: 0;
   margin: 0;
