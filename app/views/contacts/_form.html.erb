@@ -7,9 +7,10 @@
 		<h5>Contate nosso escritório</h5></br>
 
 <%= form_for(@contact) do |f| %>
-  <% if @contact.errors.any? %>
+  
+	  <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2>Ops! Corrija os erros abaixo para que possamos mandar as informações para seu email.</h2>
+      <h6>Corrija os erros abaixo para que possamos mandar as informações para seu email.</h6>
 
       <ul>
       <% @contact.errors.full_messages.each do |msg| %>
@@ -17,6 +18,7 @@
       <% end %>
       </ul>
     </div>
+
   <% end %>
 
 

@@ -1,0 +1,46 @@
+<div class="row">    
+ 
+  <!-- Main Content Section -->
+  <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+  <div class="large-7 columns">
+    
+    <h4>Direito Civil</h4>
+    
+    <p>O Brasil, por ter sido colônia de Portugal, sofreu influência do direito alienígena. Especialmente o Direito Civil que era regido pelas leis de Portugal e a partir de 1916 foi passou à regência da Lei nº 3071 de 01 de janeiro de 1916, Código Civil de 1916, sendo revogado pela Lei 10.406 de 10 de janeiro de 2002.</p>
+
+    <p>Desde meados do século XIX que a sociedade polemiza a respeito de codificação ou não do direito. Fato é que, hoje, numa sociedade moderna e dinâmica não existe mais espaço para códigos rígidos e fechados. Daí que o Código Civil de 2002 é na visão de muitos juristas e estudiosos um código de princípios. A doutrina dominante é no sentido de que codificação é benéfica porque traz unidade e coordenação ao sistema jurídico do direito civil.</p>
+
+    <p>Nosso Código Civil regula as relações de direito privado, ou seja, as relações jurídicas entre as pessoas naturais. Trata de assuntos centrais do Direito Empresarial e do direito obrigacional.</p>
+	<p>O projeto do Código passou muitos anos sendo discutido no Congresso Nacional e quando de sua aprovação já regia a Constituição de 1988, tão bem apelidada de Constituição Cidadã pelo saudoso Ulysses Guimaraes, Presidente da Constituinte que a elaborou.</p>
+	<p>Mesmo sendo o direito civil que regulamenta, ordena ou estabelece as regras gerais de como a sociedade civil, ou seja, das pessoas naturais devemos observas os princípios gerais de direito e todo o Sistema Jurídico que nossa Constituição estabelece. </p>
+	<p>O direito civil obriga a todos. E nossa vida está voltada ao convívio social e, por isso, devemos sempre respeitar as normas jurídicas e exigir que seu cumprimento seja para todos. Acabando com este vício que o Brasil possui: há lei que pega e lei que não pega.</p>
+          
+  </div>
+  
+  
+  <!-- Nav Sidebar -->
+  <!-- This is source ordered to be pulled to the left on larger screens -->
+  <div class="large-5 columns">
+      
+	  <h5>Decisões dos Tribunais</h5>
+	  <% @direito_civils.each do |direito_civil| %><hr style="border:1px dashed #000000;">
+	  <p><%= truncate(direito_civil.conteudo, :length => 200, separator: ' ') %> <%= link_to '( Leia Mais )', direito_civil %></p>
+	  <% end %>
+      
+  </div>
+  
+</div>
+<script>
+  $(document).foundation('orbit', {
+  	animation: 'fade',
+	bullets: false,
+	timer_speed: 5000,
+	animation_speed: 1000,
+	navigation_arrows: false,
+	slide_number: false,
+	pause_on_hover: false,
+  });
+</script>	  
+
+
+

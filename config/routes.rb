@@ -1,5 +1,8 @@
 AmfAdv::Application.routes.draw do
   
+  resources :direito_civils
+
+
   resources :direito_empresarials
 
 
@@ -50,6 +53,8 @@ AmfAdv::Application.routes.draw do
   
   match '/empresarial' => 'welcome#empresarial'
   
+  match '/civil' => 'welcome#civil'
+  
   match '/artigos' => 'clausulas#index'
   
   match '/artigo' => 'clausulas#show'
@@ -75,6 +80,10 @@ AmfAdv::Application.routes.draw do
   match '/decisao-previdenciarios' => 'direito_previdenciarios#index'
   
   match '/decisao-previdenciario' => 'direito_previdenciarios#show'
+  
+  match '/decisao-civils' => 'direito_civils#index'
+  
+  match '/decisao-civil' => 'direito_civils#show'
   
   
   

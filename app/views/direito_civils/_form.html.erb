@@ -1,0 +1,33 @@
+<%= form_for(@direito_civil) do |f| %>
+  <% if @direito_civil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@direito_civil.errors.count, "error") %> prohibited this direito_civil from being saved:</h2>
+
+      <ul>
+      <% @direito_civil.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :conteudo %><br />
+    <%= f.text_area :conteudo %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br />
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

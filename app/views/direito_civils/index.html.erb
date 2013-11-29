@@ -4,14 +4,14 @@
    <!-- Main Blog Content -->
    
    <div class="large-9 columns" role="content">
-	   <h4>Direito Empresarial</h4>
+	   <h4>Direito Civil</h4>
 
-		 <% for direito_empresarial in @direito_empresarials.reverse %><hr style="border:1px dashed #000000;"> 
-       <h6><%= direito_empresarial.titulo %></h6><br />
+		 <% for direito_civil in @direito_civils.reverse %><hr style="border:1px dashed #000000;"> 
+       <h6><%= direito_civil.titulo %></h6><br />
 
        
          <div class="large-12 columns">
-           <p><%= truncate(direito_empresarial.conteudo, :length => 325, separator: ' ') %> <%= link_to '( Leia Mais )', direito_empresarial %></p>
+           <p><%= truncate(direito_civil.conteudo, :length => 325, separator: ' ') %> <%= link_to '( Leia Mais )', direito_civil %></p>
          </div>
 
 	   <h8></h8>

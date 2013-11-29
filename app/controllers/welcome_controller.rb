@@ -39,6 +39,11 @@ class WelcomeController < ApplicationController
     @title = 'Antonio Martins de Farias Advogado - Direito Empresarial'
     @direito_empresarials = DireitoEmpresarial.order("created_at desc").limit(5)
   end
+  
+  def civil
+    @title = 'Antonio Martins de Farias Advogado - Direito Civil'
+    @direito_civils = DireitoCivil.order("created_at desc").limit(5)
+  end
 
 end
   
